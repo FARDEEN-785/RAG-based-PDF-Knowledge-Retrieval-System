@@ -35,7 +35,6 @@ RAG-based-PDF-Knowledge-Retrieval-System/
 │── src/
 │   ├── ingest.py        # PDF parsing & chunking
 │   ├── embed.py         # Embedding generation
-  # FAISS index creation & search
 │   ├── rag_pipeline.py  # Retrieval-Augmented Generation logic
 │   └── utils.py         # Helper functions
 │── app.py               # Main entry point (CLI or API)
