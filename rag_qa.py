@@ -6,25 +6,25 @@ import torch
 PDF_PATH = "data/Backend_Roadmap.pdf"
 
 def main():
-    print("📄 Loading PDF...")
+    print("Loading PDF")
     text = load_pdf(PDF_PATH)
 
-    print("✂️ Chunking text...")
+    print("Chunking text")
     chunks = chunk_text(text)
     print(f"Total chunks: {len(chunks)}")
 
-    print("🧠 Building vector store...")
+    print("Building vector store")
     store = VectorStore()
     store.build(chunks)
 
-    print("🤖 Loading LLM...")
+    print("Loading LLM")
     llm = pipeline(
         "text2text-generation",
         model="google/flan-t5-base",
         device=0 if torch.cuda.is_available() else -1
     )
 
-    print("\n✅ RAG SYSTEM READY")
+    print("\n RAG SYSTEM READY")
     print("Type a question (or 'exit')\n")
 
     while True:
@@ -56,3 +56,4 @@ Answer clearly in 2–3 sentences:
 
 if __name__ == "__main__":
     main()
+
