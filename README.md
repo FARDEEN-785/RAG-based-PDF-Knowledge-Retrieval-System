@@ -1,3 +1,5 @@
+📘 RAG-based PDF Knowledge Retrieval System
+
 A Retrieval-Augmented Generation (RAG) pipeline designed to extract knowledge from PDF documents and provide accurate, context-grounded answers to user queries. The system leverages embeddings, FAISS vector search, and a Large Language Model (LLM) to deliver reliable responses, while incorporating hallucination-resistant logic to ensure trustworthiness.
 
 🚀 Features
